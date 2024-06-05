@@ -1,0 +1,48 @@
+.account-container {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('../Home/bg.png'); 
+    backdrop-filter: blur(5px); 
+    font-family: Arial, sans-serif;
+    padding: 60px; 
+    box-sizing: border-box; 
+}
+
+.account-title {
+    font-size: 50px; 
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 160px;
+    color: #fff;
+}
+
+.user-detail {
+    font-size: 24px; 
+    color: #ccc;
+    margin-bottom: 50px;
+    border-bottom: 2px solid white; 
+    padding-bottom: 10px; 
+}
+
+.logout-button {
+    position: absolute; 
+    bottom: 60px; 
+    right: 60px; 
+    background-color: #00224D;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px; 
+    transition: background-color 0.3s ease; 
+}
+
+.logout-button:hover {
+    background-color: #A0153E;
+}

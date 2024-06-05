@@ -1,0 +1,67 @@
+.explore-container {
+    background-image: url('../Home/bg.png'); /* Replace with your image path */
+    padding: 10px; 
+    color: #ffffff;
+    margin-top: 55px;
+}
+
+.explore-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.search-container input {
+    width: 80%; 
+    font-size: 12px;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #ffffff;
+    margin: 0 auto; 
+    display: block; 
+}
+
+
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.movie-poster-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px; 
+    border-radius: 3px; 
+    transition: background-color 0.2s ease-in-out;
+    border-bottom: 1px solid #333; 
+}
+
+.movie-poster-link:hover {
+    background-color: #282828; 
+}
+
+.movie-poster {
+    display: flex;
+    align-items: center;
+}
+
+.movie-poster img {
+    width: 60px; 
+    height: 90px; 
+    border-radius: 3px; 
+}
+
+.name {
+    margin-left: 20px; 
+    font-weight: bold;
+    font-size: 19px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}

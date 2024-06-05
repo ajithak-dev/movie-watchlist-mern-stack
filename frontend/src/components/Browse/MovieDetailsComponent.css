@@ -1,0 +1,169 @@
+/* Base layout adjustments for a visually dominant poster */
+.movie-details-full-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background-image: url('../Home/bg.png');
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards; 
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s; 
+  transform: translateX(20px); 
+  opacity: 0;
+  animation: slideInRight 0.3s ease-in-out 0.2s forwards; 
+}
+
+.close-btn:hover {
+  color: #ff6600; 
+  transform: scale(1.2); 
+}
+
+.movie-details-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 100%;
+  margin-top: 70px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out 0.4s forwards; 
+}
+
+.movie-poster img {
+  width: 50vw;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s; 
+}
+
+.movie-poster img:hover {
+  transform: scale(1.05); 
+}
+
+.movie-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 40vw;
+  opacity: 0;
+  animation: fadeInRight 0.5s ease-in-out 0.6s forwards; 
+}
+
+.movie-info h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.movie-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Adjusted watchlist button */
+.watchlist-btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  margin-top: 65%;
+  align-self: flex-end;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-in-out 0.8s forwards; 
+  transition: background-color 0.2s; 
+}
+
+.watchlist-btn:hover {
+  background-color: #0055bb;
+}
+
+@media (max-width: 1024px) {
+  .movie-details-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-poster img {
+    width: 80%;
+  }
+
+  .movie-info {
+    max-width: 80%;
+  }
+
+  .watchlist-btn {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-info h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
